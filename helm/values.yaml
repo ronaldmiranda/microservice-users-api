@@ -2,7 +2,7 @@ microservice-deploys:
   container:
     microserviceName: users-api
     image: ronaldmiranda/users-api
-    tag: 47c54d2
+    tag: 1cb554f
     envs:
       normalEnvs:
         SERVER_PORT: "8083"
