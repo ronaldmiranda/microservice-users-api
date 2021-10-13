@@ -1,0 +1,16 @@
+microservice-deploys:
+  container:
+    microserviceName: users-api
+    image: ronaldmiranda/users-api
+    tag: 47c54d2
+    envs:
+      normalEnvs:
+        SERVER_PORT: "8083"
+        SPRING_ZIPKIN_BASE_URL: http://zipkin-svc.zipkin-system.svc.cluster.local:9411/api/v2/spans
+      envsSecretRef:
+        - ENV_NAME: JWT_SECRET
+          SECRET_NAME: jwt-secret
+          SECRET_KEY: token
+  service:
+    servicePort:
+      - 8082
