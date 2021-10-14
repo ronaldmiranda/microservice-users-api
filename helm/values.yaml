@@ -13,4 +13,4 @@ microservice-deploys:
           SECRET_KEY: token
   service:
     servicePort:
-      - 8082
+      - 8083
